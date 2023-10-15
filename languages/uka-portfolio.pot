@@ -1,0 +1,353 @@
+# Copyright (C) 2020 Uka Portfolio
+# This file is distributed under the same license as the Uka Portfolio package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Uka Portfolio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: UkaThemes <info@ukathemes.com>\n"
+"Last-Translator: Uladzimir Kulesh <uladzimir@ukathemes.com>\n"
+"Report-Msgid-Bugs-To: https://themeforest.net/user/ukathemes/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin/class-uka-portfolio-admin.php:195
+#: admin/class-uka-portfolio-admin.php:215
+msgid " items"
+msgstr ""
+
+#: includes/class-uka-portfolio.php:201
+msgid "Add item to the showcase page."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:34
+#: includes/class-uka-portfolio-post-type.php:37
+msgid "Add New"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:85
+msgid "Add New Portfolio Category"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:35
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:119
+msgid "Add New Portfolio Tag"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:88
+msgid "Add or remove portfolio categories"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:122
+msgid "Add or remove portfolio tags"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:286
+msgid "Add to the showcase"
+msgstr ""
+
+#: includes/class-uka-portfolio.php:200
+msgid "Add to the showcase:"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds Portfolio Post Type to your site."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:80
+msgid "All Portfolio Categories"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:33
+msgid "All Portfolio Items"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:114
+msgid "All Portfolio Tags"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:121
+msgid "Allow comments"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:233
+msgid "Allow people to submit comments on portfolio items"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:90
+msgid "Categories"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:89
+msgid "Choose from the most used portfolio categories"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:123
+msgid "Choose from the most used portfolio tags"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:268
+msgid "Client"
+msgstr ""
+
+#: includes/class-uka-portfolio.php:170
+msgid "Client:"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:133
+#: admin/class-uka-portfolio-admin.php:263
+msgid "Custom Meta Boxes Settings"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:114
+msgid "Discussion Settings"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:140
+msgid "Display Meta Boxes"
+msgstr ""
+
+#: includes/class-uka-portfolio.php:171
+msgid "Display the client name."
+msgstr ""
+
+#: includes/class-uka-portfolio.php:181
+msgid "Display the services."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:83
+msgid "Edit Portfolio Category"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:36
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:117
+msgid "Edit Portfolio Tag"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://ukathemes.com/"
+msgstr ""
+
+#: includes/class-uka-portfolio.php:191
+msgid "Link this portfolio item to an external URL."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:86
+msgid "New Portfolio Category Name"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:120
+msgid "New Portfolio Tag Name"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:40
+msgid "No portfolio items found"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:41
+msgid "No portfolio items found in trash"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:234
+#, php-format
+msgctxt "Number of pending portfolio items"
+msgid "%s Portfolio Item Pending"
+msgid_plural "%s Portfolio Items Pending"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-uka-portfolio-post-type.php:221
+#, php-format
+msgctxt "Number of portfolio items"
+msgid "%s Portfolio Item"
+msgid_plural "%s Portfolio Items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-uka-portfolio-post-type.php:81
+msgid "Parent Portfolio Category"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:82
+msgid "Parent Portfolio Category:"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:115
+msgid "Parent Portfolio Tag"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:116
+msgid "Parent Portfolio Tag:"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:79
+msgid "Popular Portfolio Categories"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:113
+msgid "Popular Portfolio Tags"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:63
+#: includes/class-uka-portfolio-post-type.php:31
+msgid "Portfolio"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:76
+msgid "Portfolio Categories"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:77
+msgid "Portfolio Category"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:32
+msgid "Portfolio Item"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:44
+msgid "Portfolio item published privately."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:43
+msgid "Portfolio item published."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:45
+msgid "Portfolio item reverted to draft."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:46
+msgid "Portfolio item scheduled."
+msgstr ""
+
+#: includes/class-uka-portfolio.php:211
+msgid "Portfolio Item Settings"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:42
+msgid "Portfolio item updated."
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:91
+msgid "Portfolio pages show at most"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:62
+#: admin/class-uka-portfolio-admin.php:304
+msgid "Portfolio Settings"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:111
+msgid "Portfolio Tag"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:110
+msgid "Portfolio Tags"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:84
+msgid "Reading Settings"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:78
+msgid "Search Portfolio Categories"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:39
+msgid "Search Portfolio Items"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:112
+msgid "Search Portfolio Tags"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:246
+msgid ""
+"Select the meta boxes that will be displayed on the portfolio item page."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:87
+msgid "Separate portfolio categories with commas"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:121
+msgid "Separate portfolio tags with commas"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:274
+msgid "Services"
+msgstr ""
+
+#: includes/class-uka-portfolio.php:180
+msgid "Services:"
+msgstr ""
+
+#: uka-portfolio.php:53
+msgid "Settings"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:176
+msgid ""
+"Specify the number of portfolio items that you would like to see on the "
+"portfolio archive pages and on the portfolio showcase page."
+msgstr ""
+
+#: public/class-uka-portfolio-public.php:25
+msgid "Tag: "
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:102
+msgid "The showcase page shows at most"
+msgstr ""
+
+#: includes/class-uka-portfolio-activator.php:23
+#, php-format
+msgid ""
+"This plugin requires at least WordPress version 4.7. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:150
+msgid "Thumbnail"
+msgstr ""
+
+#. Name of the plugin
+msgid "Uka Portfolio"
+msgstr ""
+
+#. Author of the plugin
+msgid "UkaThemes"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:84
+msgid "Update Portfolio Category"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:118
+msgid "Update Portfolio Tag"
+msgstr ""
+
+#: includes/class-uka-portfolio-post-type.php:38
+msgid "View Portfolio Item"
+msgstr ""
+
+#: admin/class-uka-portfolio-admin.php:280
+msgid "Website"
+msgstr ""
+
+#: includes/class-uka-portfolio.php:190
+msgid "Website:"
+msgstr ""

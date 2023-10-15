@@ -1,0 +1,13 @@
+#dashboard_right_now li.portfolio-count a::before,
+#dashboard_right_now li.portfolio-pending-count a::before {
+	content: "\f322";
+}
+
+.fixed .column-portfolio-thumbnail {
+	width: 10%;
+}
+
+.fixed .column-taxonomy-portfolio-category,
+.fixed .column-taxonomy-portfolio-tag {
+	width: 15%;
+}
