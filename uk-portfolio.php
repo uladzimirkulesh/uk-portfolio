@@ -22,7 +22,7 @@ define( 'UK_PORTFOLIO_POST_TYPE_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-uk-portfolio-post-type-activator.php
+ * This action is documented in includes/class-uk-portfolio-activator.php
  */
 function activate_uka_portfolio() {
 
