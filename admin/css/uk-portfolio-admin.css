@@ -1,0 +1,13 @@
+#dashboard_right_now li.projects-count a::before,
+#dashboard_right_now li.projects-pending-count a::before {
+	content: "\f322";
+}
+
+.fixed .column-uk-project-thumbnail {
+	width: 10%;
+}
+
+.fixed .column-taxonomy-uk-project-category,
+.fixed .column-taxonomy-uk-project-tag {
+	width: 15%;
+}

@@ -4,11 +4,11 @@
  *
  * @since      1.0.0
  *
- * @package    Uka_Portfolio
- * @subpackage Uka_Portfolio/includes
+ * @package    Uk_Portfolio
+ * @subpackage Uk_Portfolio/includes
  */
 
-class Uka_Portfolio_Metaboxes {
+class Uk_Portfolio_Metaboxes {
 
 	/**
 	 * Array of options for adding a metabox.
@@ -59,7 +59,7 @@ class Uka_Portfolio_Metaboxes {
 
 		global $post;
 
-		wp_nonce_field( basename( __FILE__ ), 'uka_meta_box_wp_nonce' );
+		wp_nonce_field( basename( __FILE__ ), 'uk_meta_box_wp_nonce' );
 
 		echo '<table class="index-meta-table form-table"><tbody>';
 		foreach ( $this->options[ 'fields' ] as $field ) {
@@ -71,21 +71,21 @@ class Uka_Portfolio_Metaboxes {
 			switch ( $field[ 'type' ] ) {
 				case 'text':
 					echo '<td>';
-					echo '<input type="text" id="' . $field[ 'id' ] . '" name="uka_meta[' . $field['id'] . ']" value="' . ( $meta ? $meta : $field[ 'std' ] ) . '" size="30" />';
+					echo '<input type="text" id="' . $field[ 'id' ] . '" name="uk_meta[' . $field['id'] . ']" value="' . ( $meta ? $meta : $field[ 'std' ] ) . '" size="30" />';
 					echo '<p class="description">' . $field['desc'] . '</p>';
 					echo '</td>';
 					break;
 
 				case 'textarea':
 					echo '<td>';
-					echo '<textarea id="' . $field[ 'id' ] . '" name="uka_meta[' . $field['id'] . ']" rows="7" cols="5">' . ( $meta ? $meta : $field[ 'std' ] ) . '</textarea>';
+					echo '<textarea id="' . $field[ 'id' ] . '" name="uk_meta[' . $field['id'] . ']" rows="7" cols="5">' . ( $meta ? $meta : $field[ 'std' ] ) . '</textarea>';
 					echo '<p class="description">' . $field[ 'desc' ] . '</p>';
 					echo '</td>';
 					break;
 
 				case 'select':
 					echo '<td>';
-					echo '<select id="' . $field[ 'id' ] . '" name="uka_meta[' . $field['id'] . ']">';
+					echo '<select id="' . $field[ 'id' ] . '" name="uk_meta[' . $field['id'] . ']">';
 					foreach ( $field[ 'options' ] as $key => $option ) {
 						echo '<option value="' . $key . '"';
 						if ( $meta ) {
@@ -110,7 +110,7 @@ class Uka_Portfolio_Metaboxes {
 					echo '<ul class="radio-list">';
 					foreach ( $field[ 'options' ] as $key => $option ) {
 						echo '<li>';
-						echo '<input type="radio" id="' . $field[ 'id' ] . $i . '" name="uka_meta[' . $field['id'] .']" value="' . $key . '"';
+						echo '<input type="radio" id="' . $field[ 'id' ] . $i . '" name="uk_meta[' . $field['id'] .']" value="' . $key . '"';
 						if ( $meta ) {
 							if ( $meta == $key ) {
 								echo ' checked="checked"';
@@ -142,8 +142,8 @@ class Uka_Portfolio_Metaboxes {
 							$val = ' checked="checked"';
 						}
 					}
-					echo '<input type="hidden" name="uka_meta[' . $field['id'] . ']" value="off" />
-								<input type="checkbox" id="' . $field[ 'id' ] . '" name="uka_meta[' . $field['id'] . ']" value="on"' . $val . ' />
+					echo '<input type="hidden" name="uk_meta[' . $field['id'] . ']" value="off" />
+								<input type="checkbox" id="' . $field[ 'id' ] . '" name="uk_meta[' . $field['id'] . ']" value="on"' . $val . ' />
 								<label for="' . $field[ 'id' ] . '">' . $field[ 'desc' ] . '</label>';
 					echo '</td>';
 					break;
@@ -165,7 +165,7 @@ class Uka_Portfolio_Metaboxes {
 			return;
 		}
 
-		if ( ! isset( $_POST[ 'uka_meta' ] ) || ! isset( $_POST[ 'uka_meta_box_wp_nonce' ] ) || ! wp_verify_nonce( $_POST[ 'uka_meta_box_wp_nonce' ], basename( __FILE__ ) ) ) {
+		if ( ! isset( $_POST[ 'uk_meta' ] ) || ! isset( $_POST[ 'uk_meta_box_wp_nonce' ] ) || ! wp_verify_nonce( $_POST[ 'uk_meta_box_wp_nonce' ], basename( __FILE__ ) ) ) {
 			return;
 		}
 
@@ -179,7 +179,7 @@ class Uka_Portfolio_Metaboxes {
 			}
 		}
 
-		foreach ( $_POST[ 'uka_meta' ] as $key => $val ) {
+		foreach ( $_POST[ 'uk_meta' ] as $key => $val ) {
 			update_post_meta( $post_id, $key, $val );
 		}
 
