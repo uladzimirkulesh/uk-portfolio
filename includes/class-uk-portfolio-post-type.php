@@ -1,15 +1,9 @@
 <?php
 /**
  * The class responsible for adding "Project" post type
- *
- * @link       https://uladzimirkulesh.com/
- * @since      1.0.0
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
  */
 
-class Uk_Portfolio_Post_Type {
+class UK_Portfolio_Post_Type {
 
 	/**
 	 * Initialize the class and set its properties.
@@ -17,7 +11,9 @@ class Uk_Portfolio_Post_Type {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		add_theme_support( 'post-thumbnails', array( 'uk-portfolio' ) );
+
+		add_theme_support( 'post-thumbnails', array( 'uk_portfolio' ) );
+
 	}
 
 	/**
@@ -70,7 +66,7 @@ class Uk_Portfolio_Post_Type {
 
 		$args = apply_filters( 'uk_project_args', $args );
 
-		register_post_type( 'uk-project', $args );
+		register_post_type( 'uk_project', $args );
 
 		// Register categories
 		$taxonomy_project_category_labels = array(
@@ -104,7 +100,7 @@ class Uk_Portfolio_Post_Type {
 			'show_in_rest'      => true,
 		);
 
-		register_taxonomy( 'uk-project-category', array( 'uk-project' ), $taxonomy_project_category_args );
+		register_taxonomy( 'uk_project_category', array( 'uk_project' ), $taxonomy_project_category_args );
 
 		// Register tags
 		$taxonomy_project_tag_labels = array(
@@ -138,7 +134,7 @@ class Uk_Portfolio_Post_Type {
 			'show_in_rest'      => true,
 		);
 
-		register_taxonomy( 'uk-project-tag', array( 'uk-project' ), $taxonomy_project_tag_args );
+		register_taxonomy( 'uk_project_tag', array( 'uk_project' ), $taxonomy_project_tag_args );
 	}
 
 	/**
@@ -148,7 +144,7 @@ class Uk_Portfolio_Post_Type {
 	 */
 	public function add_thumbnail_column( $columns ) {
 
-		$column_thumb = array( 'uk-project-thumbnail' => esc_html__('Thumbnails', 'uk-portfolio' ) );
+		$column_thumb = array( 'uk_project_thumbnail' => esc_html__('Thumbnails', 'uk-portfolio' ) );
 		$columns = array_slice( $columns, 0, 2, true ) + $column_thumb + array_slice( $columns, 1, NULL, true );
 
 		return $columns;
@@ -165,7 +161,7 @@ class Uk_Portfolio_Post_Type {
 		global $post;
 
 		switch ( $column ) {
-			case 'uk-project-thumbnail':
+			case 'uk_project_thumbnail':
 				echo get_the_post_thumbnail( $post->ID, array( 48, 48 ) );
 				break;
 		}
@@ -182,10 +178,10 @@ class Uk_Portfolio_Post_Type {
 		global $typenow;
 
 		// Use taxonomy name or slug
-		$taxonomies = array( 'uk-project-category', 'uk-project-tag' );
+		$taxonomies = array( 'uk_project_category', 'uk_project_tag' );
 
 		// Post type for the filter
-		if ( $typenow == 'uk-project' ) {
+		if ( $typenow == 'uk_project' ) {
 			foreach ( $taxonomies as $tax_slug ) {
 				$current_tax_slug = isset( $_GET[ $tax_slug ] ) ? $_GET[ $tax_slug ] : false;
 				$tax_obj = get_taxonomy( $tax_slug );
@@ -206,26 +202,26 @@ class Uk_Portfolio_Post_Type {
 	}
 
 	/**
-	 * Add count to "RIGHT NOW" dashboard widget.
+	 * Add count to "Right Now" dashboard widget.
 	 *
 	 * @since    1.0.0
 	 */
 	public function add_projects_count() {
 
-		if ( ! post_type_exists( 'uk-project' ) ) {
+		if ( ! post_type_exists( 'uk_project' ) ) {
 			return;
 		}
 
-		$num_posts = wp_count_posts( 'uk-project' );
+		$num_posts = wp_count_posts( 'uk_project' );
 
 		if ( $num_posts && $num_posts->publish ) {
 			$text = esc_html( _nx( '%s Project', '%s Projects', $num_posts->publish, 'Number of projects', 'uk-portfolio' ) );
 
 			$text             = sprintf( $text, number_format_i18n( $num_posts->publish ) );
-			$post_type_object = get_post_type_object( 'uk-project' );
+			$post_type_object = get_post_type_object( 'uk_project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
-				printf( '<li class="projects-count"><a href="edit.php?post_type=uk-project">%s</a></li>', $text );
+				printf( '<li class="projects-count"><a href="edit.php?post_type=uk_project">%s</a></li>', $text );
 			} else {
 				printf( '<li class="projects-count"><span>%s</span></li>', $text );
 			}
@@ -235,10 +231,10 @@ class Uk_Portfolio_Post_Type {
 			$text = esc_html( _nx( '%s Project Pending', '%s Proects Pending', $num_posts->pending, 'Number of pending projects', 'uk-portfolio' ) );
 
 			$text             = sprintf( $text, number_format_i18n( $num_posts->pending ) );
-			$post_type_object = get_post_type_object( 'uk-project' );
+			$post_type_object = get_post_type_object( 'uk_project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
-				printf( '<li class="projects-pending-count"><a href="edit.php?post_status=pending&post_type=uk-project">%s</a></li>', $text );
+				printf( '<li class="projects-pending-count"><a href="edit.php?post_status=pending&post_type=uk_project">%s</a></li>', $text );
 			}
 		}
 

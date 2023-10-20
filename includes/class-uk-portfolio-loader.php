@@ -2,25 +2,12 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://uladzimirkulesh.com/
- * @since      1.0.0
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
- */
-
-/**
- * Register all actions and filters for the plugin.
- *
  * Maintain a list of all hooks that are registered throughout
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
- * @author     Uladzimir Kulesh <hello@uladzimirkulesh.com>
  */
-class Uk_Portfolio_Loader {
+
+class UK_Portfolio_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
@@ -63,7 +50,9 @@ class Uk_Portfolio_Loader {
 	 * @param    int                  $accepted_args    Optional. The number of arguments that should be passed to the $callback. Default is 1.
 	 */
 	public function add_action( $hook, $component, $callback, $priority = 10, $accepted_args = 1 ) {
+
 		$this->actions = $this->add( $this->actions, $hook, $component, $callback, $priority, $accepted_args );
+
 	}
 
 	/**
@@ -77,7 +66,9 @@ class Uk_Portfolio_Loader {
 	 * @param    int                  $accepted_args    Optional. The number of arguments that should be passed to the $callback. Default is 1
 	 */
 	public function add_filter( $hook, $component, $callback, $priority = 10, $accepted_args = 1 ) {
+
 		$this->filters = $this->add( $this->filters, $hook, $component, $callback, $priority, $accepted_args );
+
 	}
 
 	/**

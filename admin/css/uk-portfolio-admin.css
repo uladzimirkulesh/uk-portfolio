@@ -3,11 +3,11 @@
 	content: "\f322";
 }
 
-.fixed .column-uk-project-thumbnail {
+.fixed .column-uk_project_thumbnail {
 	width: 10%;
 }
 
-.fixed .column-taxonomy-uk-project-category,
-.fixed .column-taxonomy-uk-project-tag {
+.fixed .column-taxonomy-uk_project_category,
+.fixed .column-taxonomy-uk_project_tag {
 	width: 15%;
 }

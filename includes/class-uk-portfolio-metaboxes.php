@@ -1,14 +1,9 @@
 <?php
 /**
  * TThe class responsible for adding metaboxes
- *
- * @since      1.0.0
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
  */
 
-class Uk_Portfolio_Metaboxes {
+class UK_Portfolio_Metaboxes {
 
 	/**
 	 * Array of options for adding a metabox.
@@ -25,7 +20,9 @@ class Uk_Portfolio_Metaboxes {
 	 * @since    1.0.0
 	 */
 	public function __construct( $options = array() ) {
+
 		$this->options = $options;
+
 	}
 
 	/**

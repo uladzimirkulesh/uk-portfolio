@@ -5,28 +5,11 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://uladzimirkulesh.com/
- * @since      1.0.0
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
- */
-
-/**
- * The core plugin class.
- *
- * This is used to define internationalization, admin-specific hooks, and
- * public-facing site hooks.
- *
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
- *
- * @since      1.0.0
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
- * @author     Uladzimir Kulesh <hello@uladzimirkulesh.com>
  */
-class Uk_Portfolio {
+
+class UK_Portfolio {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -34,7 +17,7 @@ class Uk_Portfolio {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Uk_Portfolio_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      UK_Portfolio_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -66,6 +49,7 @@ class Uk_Portfolio {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
+
 		if ( defined( 'UK_PORTFOLIO_VERSION' ) ) {
 			$this->version = UK_PORTFOLIO_VERSION;
 		} else {
@@ -87,12 +71,12 @@ class Uk_Portfolio {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Uk_Portfolio_Loader. Orchestrates the hooks of the plugin.
-	 * - Uk_Portfolio_i18n. Defines internationalization functionality.
-	 * - Uk_Portfolio_Post_Type. Adding "Project" post type.
-	 * - Uk_Portfolio_Metaboxes. Adding metaboxes.
-	 * - Uk_Portfolio_Admin. Defines all hooks for the admin area.
-	 * - Uk_Portfolio_Public. Defines all hooks for the public side of the site.
+	 * - UK_Portfolio_Loader. Orchestrates the hooks of the plugin.
+	 * - UK_Portfolio_i18n. Defines internationalization functionality.
+	 * - UK_Portfolio_Post_Type. Adding "Project" post type.
+	 * - UK_Portfolio_Metaboxes. Adding metaboxes.
+	 * - UK_Portfolio_Admin. Defines all hooks for the admin area.
+	 * - UK_Portfolio_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -115,7 +99,7 @@ class Uk_Portfolio {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-uk-portfolio-i18n.php';
 
 		/**
-		 * The class responsible for adding "Portfolio" post type.
+		 * The class responsible for adding "Project" post type.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-uk-portfolio-post-type.php';
 
@@ -135,14 +119,14 @@ class Uk_Portfolio {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-uk-portfolio-public.php';
 
-		$this->loader = new Uk_Portfolio_Loader();
+		$this->loader = new UK_Portfolio_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Uk_Portfolio_i18n class in order to set the domain and to register the hook
+	 * Uses the UK_Portfolio_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -150,7 +134,7 @@ class Uk_Portfolio {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Uk_Portfolio_i18n();
+		$plugin_i18n = new UK_Portfolio_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -164,10 +148,10 @@ class Uk_Portfolio {
 	 */
 	private function add_project_post_type() {
 
-		$plugin_post_type = new Uk_Portfolio_Post_Type();
+		$plugin_post_type = new UK_Portfolio_Post_Type();
 
 		$this->loader->add_action( 'init', $plugin_post_type, 'register_project_post_type' );
-		$this->loader->add_filter( 'manage_edit-uk-project_columns', $plugin_post_type, 'add_thumbnail_column' );
+		$this->loader->add_filter( 'manage_edit-uk_project_columns', $plugin_post_type, 'add_thumbnail_column' );
 		$this->loader->add_action( 'manage_posts_custom_column', $plugin_post_type, 'display_thumbnail' );
 		$this->loader->add_action( 'restrict_manage_posts', $plugin_post_type, 'add_taxonomy_filters' );
 		$this->loader->add_filter( 'dashboard_glance_items', $plugin_post_type, 'add_projects_count' );
@@ -198,16 +182,16 @@ class Uk_Portfolio {
 
 		if ( $fields ) {
 			$portfolio_metaboxes = array(
-				'id'          => 'uk-project-meta',
+				'id'          => 'uk_project_meta',
 				'title'       => esc_html__( 'Project Settings', 'uk-portfolio' ),
 				'description' => esc_html__( '', 'uk-portfolio' ),
-				'screen'      => array( 'uk-project' ),
+				'screen'      => array( 'uk_project' ),
 				'context'     => 'normal',
 				'priority'    => 'high',
 				'fields'      => $fields,
 			);
 
-			$plugin_metaboxes = new Uk_Portfolio_Metaboxes( $portfolio_metaboxes );
+			$plugin_metaboxes = new UK_Portfolio_Metaboxes( $portfolio_metaboxes );
 
 			$this->loader->add_action( 'add_meta_boxes', $plugin_metaboxes, 'add_meta_boxes' );
 			$this->loader->add_action( 'save_post', $plugin_metaboxes, 'save_meta_boxes', 10, 2 );
@@ -224,7 +208,7 @@ class Uk_Portfolio {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Uk_Portfolio_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new UK_Portfolio_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'create_settings_submenu' );
@@ -240,7 +224,7 @@ class Uk_Portfolio {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Uk_Portfolio_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new UK_Portfolio_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -254,7 +238,9 @@ class Uk_Portfolio {
 	 * @since    1.0.0
 	 */
 	public function run() {
+
 		$this->loader->run();
+
 	}
 
 	/**
@@ -265,17 +251,21 @@ class Uk_Portfolio {
 	 * @return    string    The name of the plugin.
 	 */
 	public function get_plugin_name() {
+
 		return $this->plugin_name;
+
 	}
 
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Uk_Portfolio_Loader    Orchestrates the hooks of the plugin.
+	 * @return    UK_Portfolio_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
+
 		return $this->loader;
+
 	}
 
 	/**
@@ -285,7 +275,9 @@ class Uk_Portfolio {
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {
+
 		return $this->version;
+
 	}
 
 }

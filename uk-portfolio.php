@@ -1,10 +1,5 @@
 <?php
 /**
- * @link              https://uladzimirkulesh.com/
- * @since             1.0.0
- * @package           Uk_Portfolio
- *
- * @wordpress-plugin
  * Plugin Name:       UK Portfolio
  * Plugin URI:        https://uladzimirkulesh.com/portfolio/uk-portfolio
  * Description:       Adds Project Post Type to your site.
@@ -32,8 +27,10 @@ define( 'UK_PORTFOLIO_VERSION', '1.0.0' );
  * This action is documented in includes/class-uk-portfolio-activator.php
  */
 function activate_uk_portfolio() {
+
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-uk-portfolio-activator.php';
-	Uk_Portfolio_Activator::activate();
+	UK_Portfolio_Activator::activate();
+
 }
 register_activation_hook( __FILE__, 'activate_uk_portfolio' );
 
@@ -63,7 +60,7 @@ add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'uk_portfolio_se
  */
 function run_uk_portfolio() {
 
-	$plugin = new Uk_Portfolio();
+	$plugin = new UK_Portfolio();
 	$plugin->run();
 
 }

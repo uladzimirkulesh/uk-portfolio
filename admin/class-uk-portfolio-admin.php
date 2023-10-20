@@ -1,22 +1,9 @@
 <?php
 /**
  * The admin-specific functionality of the plugin.
- *
- * @link       https://uladzimirkulesh.com/
- * @since      1.0.0
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/admin
  */
 
-/**
- * The admin-specific functionality of the plugin.
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/admin
- * @author     Uladzimir Kulesh <hello@uladzimirkulesh.com>
- */
-class Uk_Portfolio_Admin {
+class UK_Portfolio_Admin {
 
 	/**
 	 * The ID of this plugin.

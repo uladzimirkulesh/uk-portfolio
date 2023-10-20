@@ -1,22 +1,9 @@
 <?php
 /**
  * The public-facing functionality of the plugin.
- *
- * @link       https://uladzimirkulesh.com/
- * @since      1.0.0
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/public
  */
 
-/**
- * The public-facing functionality of the plugin.
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/public
- * @author     Uladzimir Kulesh <hello@uladzimirkulesh.com>
- */
-class Uk_Portfolio_Public {
+class UK_Portfolio_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -83,7 +70,7 @@ class Uk_Portfolio_Public {
 		$portfolio_items_per_page = $options[ 'projects_per_page' ];
 
 		if ( ! is_admin() && $query->is_main_query() && $query->is_archive ) {
-			if ( $query->is_post_type_archive( 'uk-project' ) || $query->is_tax( 'uk-project-category' ) || $query->is_tax( 'uk-project-tag' ) ) {
+			if ( $query->is_post_type_archive( 'uk_project' ) || $query->is_tax( 'uk_project_category' ) || $query->is_tax( 'uk_project_tag' ) ) {
 				$query->set( 'posts_per_page', $portfolio_items_per_page );
 			}
 		}

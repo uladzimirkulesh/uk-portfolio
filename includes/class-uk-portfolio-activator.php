@@ -2,27 +2,13 @@
 /**
  * Fired during plugin activation
  *
- * @link       https://uladzimirkulesh.com/
- * @since      1.0.0
- *
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
+ * This class defines all code necessary to run during the plugin's activation.
  */
 
-/**
- * Fired during plugin activation.
- *
- * This class defines all code necessary to run during the plugin's activation.
- *
- * @since      1.0.0
- * @package    Uk_Portfolio
- * @subpackage Uk_Portfolio/includes
- * @author     Uladzimir Kulesh <hello@uladzimirkulesh.com>
- */
-class Uk_Portfolio_Activator {
+class UK_Portfolio_Activator {
 
 	/**
-	 * Compare WordPress version and set parameters
+	 * Compare WordPress version and set parameters.
 	 *
 	 * @since    1.0.0
 	 */
