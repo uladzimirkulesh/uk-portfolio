@@ -33,5 +33,5 @@ To allow users have a portfolio functionality in my themes. And hopefully to sav
 
 == Changelog ==
 
-= 1.0.0 - October 21 2023 =
+= 1.0.0 - October 21, 2023 =
 * Initial release.
