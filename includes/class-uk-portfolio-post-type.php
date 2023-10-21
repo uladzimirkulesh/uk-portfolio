@@ -12,7 +12,7 @@ class UK_Portfolio_Post_Type {
 	 */
 	public function __construct() {
 
-		add_theme_support( 'post-thumbnails', array( 'uk_portfolio' ) );
+		add_theme_support( 'post-thumbnails', array( 'uk-portfolio' ) );
 
 	}
 
@@ -64,9 +64,9 @@ class UK_Portfolio_Post_Type {
 			);
 		}
 
-		$args = apply_filters( 'uk_project_args', $args );
+		$args = apply_filters( 'uk-project_args', $args );
 
-		register_post_type( 'uk_project', $args );
+		register_post_type( 'uk-project', $args );
 
 		// Register categories
 		$taxonomy_project_category_labels = array(
@@ -100,7 +100,7 @@ class UK_Portfolio_Post_Type {
 			'show_in_rest'      => true,
 		);
 
-		register_taxonomy( 'uk_project_category', array( 'uk_project' ), $taxonomy_project_category_args );
+		register_taxonomy( 'uk-project_category', array( 'uk-project' ), $taxonomy_project_category_args );
 
 		// Register tags
 		$taxonomy_project_tag_labels = array(
@@ -134,7 +134,7 @@ class UK_Portfolio_Post_Type {
 			'show_in_rest'      => true,
 		);
 
-		register_taxonomy( 'uk_project_tag', array( 'uk_project' ), $taxonomy_project_tag_args );
+		register_taxonomy( 'uk-project_tag', array( 'uk-project' ), $taxonomy_project_tag_args );
 	}
 
 	/**
@@ -144,7 +144,7 @@ class UK_Portfolio_Post_Type {
 	 */
 	public function add_thumbnail_column( $columns ) {
 
-		$column_thumb = array( 'uk_project_thumbnail' => esc_html__('Thumbnails', 'uk-portfolio' ) );
+		$column_thumb = array( 'uk-project_thumbnail' => esc_html__('Thumbnails', 'uk-portfolio' ) );
 		$columns = array_slice( $columns, 0, 2, true ) + $column_thumb + array_slice( $columns, 1, NULL, true );
 
 		return $columns;
@@ -161,7 +161,7 @@ class UK_Portfolio_Post_Type {
 		global $post;
 
 		switch ( $column ) {
-			case 'uk_project_thumbnail':
+			case 'uk-project_thumbnail':
 				echo get_the_post_thumbnail( $post->ID, array( 48, 48 ) );
 				break;
 		}
@@ -178,10 +178,10 @@ class UK_Portfolio_Post_Type {
 		global $typenow;
 
 		// Use taxonomy name or slug
-		$taxonomies = array( 'uk_project_category', 'uk_project_tag' );
+		$taxonomies = array( 'uk-project_category', 'uk-project_tag' );
 
 		// Post type for the filter
-		if ( $typenow == 'uk_project' ) {
+		if ( $typenow == 'uk-project' ) {
 			foreach ( $taxonomies as $tax_slug ) {
 				$current_tax_slug = isset( $_GET[ $tax_slug ] ) ? $_GET[ $tax_slug ] : false;
 				$tax_obj = get_taxonomy( $tax_slug );
@@ -208,20 +208,20 @@ class UK_Portfolio_Post_Type {
 	 */
 	public function add_projects_count() {
 
-		if ( ! post_type_exists( 'uk_project' ) ) {
+		if ( ! post_type_exists( 'uk-project' ) ) {
 			return;
 		}
 
-		$num_posts = wp_count_posts( 'uk_project' );
+		$num_posts = wp_count_posts( 'uk-project' );
 
 		if ( $num_posts && $num_posts->publish ) {
 			$text = esc_html( _nx( '%s Project', '%s Projects', $num_posts->publish, 'Number of projects', 'uk-portfolio' ) );
 
 			$text             = sprintf( $text, number_format_i18n( $num_posts->publish ) );
-			$post_type_object = get_post_type_object( 'uk_project' );
+			$post_type_object = get_post_type_object( 'uk-project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
-				printf( '<li class="projects-count"><a href="edit.php?post_type=uk_project">%s</a></li>', $text );
+				printf( '<li class="projects-count"><a href="edit.php?post_type=uk-project">%s</a></li>', $text );
 			} else {
 				printf( '<li class="projects-count"><span>%s</span></li>', $text );
 			}
@@ -231,10 +231,10 @@ class UK_Portfolio_Post_Type {
 			$text = esc_html( _nx( '%s Project Pending', '%s Proects Pending', $num_posts->pending, 'Number of pending projects', 'uk-portfolio' ) );
 
 			$text             = sprintf( $text, number_format_i18n( $num_posts->pending ) );
-			$post_type_object = get_post_type_object( 'uk_project' );
+			$post_type_object = get_post_type_object( 'uk-project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
-				printf( '<li class="projects-pending-count"><a href="edit.php?post_status=pending&post_type=uk_project">%s</a></li>', $text );
+				printf( '<li class="projects-pending-count"><a href="edit.php?post_status=pending&post_type=uk-project">%s</a></li>', $text );
 			}
 		}
 

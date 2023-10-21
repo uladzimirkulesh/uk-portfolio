@@ -151,7 +151,7 @@ class UK_Portfolio {
 		$plugin_post_type = new UK_Portfolio_Post_Type();
 
 		$this->loader->add_action( 'init', $plugin_post_type, 'register_project_post_type' );
-		$this->loader->add_filter( 'manage_edit-uk_project_columns', $plugin_post_type, 'add_thumbnail_column' );
+		$this->loader->add_filter( 'manage_edit-uk-project_columns', $plugin_post_type, 'add_thumbnail_column' );
 		$this->loader->add_action( 'manage_posts_custom_column', $plugin_post_type, 'display_thumbnail' );
 		$this->loader->add_action( 'restrict_manage_posts', $plugin_post_type, 'add_taxonomy_filters' );
 		$this->loader->add_filter( 'dashboard_glance_items', $plugin_post_type, 'add_projects_count' );
@@ -182,10 +182,10 @@ class UK_Portfolio {
 
 		if ( $fields ) {
 			$portfolio_metaboxes = array(
-				'id'          => 'uk_project_meta',
+				'id'          => 'uk-project_meta',
 				'title'       => esc_html__( 'Project Settings', 'uk-portfolio' ),
 				'description' => esc_html__( '', 'uk-portfolio' ),
-				'screen'      => array( 'uk_project' ),
+				'screen'      => array( 'uk-project' ),
 				'context'     => 'normal',
 				'priority'    => 'high',
 				'fields'      => $fields,
@@ -224,10 +224,8 @@ class UK_Portfolio {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new UK_Portfolio_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new UK_Portfolio_Public();
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_action( 'pre_get_posts', $plugin_public, 'projects_per_page' );
 
 	}
