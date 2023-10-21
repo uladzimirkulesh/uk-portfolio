@@ -1,0 +1,306 @@
+# Copyright (C) 2023 Uladzimir Kulesh
+# This file is distributed under the same license as the UK Portfolio package.
+msgid ""
+msgstr ""
+"Project-Id-Version: UK Portfolio\n"
+"Report-Msgid-Bugs-To: https://uladzimirkulesh.com\n"
+"POT-Creation-Date: 2023-10-21 17:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
+"Language-Team: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
+"Language: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.3.2\n"
+"X-Domain: uk-portfolio"
+
+#: admin/class-uk-portfolio-admin.php:177
+msgid " projects"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:213
+msgid "\"Add To Featured\" Settings"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:31
+#: includes/class-uk-portfolio-post-type.php:34
+msgid "Add New"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:82
+msgid "Add New Category"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:32
+msgid "Add New Project"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:116
+msgid "Add New Tag"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:85
+msgid "Add or remove categories"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:119
+msgid "Add or remove tags"
+msgstr ""
+
+#: includes/class-uk-portfolio.php:176
+msgid "Add project to featured"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:126
+msgid "Add to featured"
+msgstr ""
+
+#: includes/class-uk-portfolio.php:175
+msgid "Add to featured:"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds Project Post Type to your site."
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:77
+msgid "All Categories"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:30
+msgid "All Projects"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:111
+msgid "All Tags"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:107
+msgid "Allow comments"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:195
+msgid "Allow people to submit comments on projects"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:73
+#: includes/class-uk-portfolio-post-type.php:87
+msgid "Categories"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:74
+msgid "Category"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:86
+msgid "Choose from the most used categories"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:120
+msgid "Choose from the most used tags"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:100
+msgid "Discussion Settings"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:218
+msgid ""
+"Display \"Add to featured\" checkbox when adding or editing project page"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:80
+msgid "Edit Category"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:33
+msgid "Edit Project"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:114
+msgid "Edit Tag"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://uladzimirkulesh.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://uladzimirkulesh.com/portfolio/uk-portfolio"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:83
+msgid "New Category Name"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:117
+msgid "New Tag Name"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:37
+msgid "No projects found"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:38
+msgid "No projects found in trash"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:231
+#, php-format
+msgctxt "Number of pending projects"
+msgid "%s Project Pending"
+msgid_plural "%s Proects Pending"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-uk-portfolio-post-type.php:218
+#, php-format
+msgctxt "Number of projects"
+msgid "%s Project"
+msgid_plural "%s Projects"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-uk-portfolio-post-type.php:78
+msgid "Parent Category"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:79
+msgid "Parent Category:"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:112
+msgid "Parent Tag"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:113
+msgid "Parent Tag:"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:76
+msgid "Popular Categories"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:110
+msgid "Popular Tags"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:60
+msgid "Portfolio"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:88
+msgid "Portfolio pages show at most"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:59 admin/class-uk-portfolio-admin.php:234
+msgid "Portfolio Settings"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:29
+msgid "Project"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:41
+msgid "Project published privately."
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:40
+msgid "Project published."
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:42
+msgid "Project reverted to draft."
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:43
+msgid "Project scheduled."
+msgstr ""
+
+#: includes/class-uk-portfolio.php:186 admin/class-uk-portfolio-admin.php:119
+msgid "Project Settings"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:39
+msgid "Project updated."
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:28
+msgid "Projects"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:81
+msgid "Reading Settings"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:75
+msgid "Search Categories"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:36
+msgid "Search Projects"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:109
+msgid "Search Tags"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:84
+msgid "Separate categories with commas"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:118
+msgid "Separate tags with commas"
+msgstr ""
+
+#: uk-portfolio.php:50
+msgid "Settings"
+msgstr ""
+
+#: admin/class-uk-portfolio-admin.php:158
+msgid ""
+"Specify the number of projects that you would like to see on the portfolio "
+"archive pages."
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:108
+msgid "Tag"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:107
+msgid "Tags"
+msgstr ""
+
+#: includes/class-uk-portfolio-activator.php:20
+#, php-format
+msgid ""
+"This plugin requires at least WordPress version 6.2. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:147
+msgid "Thumbnails"
+msgstr ""
+
+#. Name of the plugin
+msgid "UK Portfolio"
+msgstr ""
+
+#. Author of the plugin
+msgid "Uladzimir Kulesh"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:81
+msgid "Update Category"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:115
+msgid "Update Tag"
+msgstr ""
+
+#: includes/class-uk-portfolio-post-type.php:35
+msgid "View Project"
+msgstr ""

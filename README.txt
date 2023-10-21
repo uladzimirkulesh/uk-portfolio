@@ -1,6 +1,6 @@
 === UK Portfolio ===
-Contributors: Uladzimir Kulesh
-Tags: portfolio, wordpress
+Contributors: uladzimirkulesh
+Tags: portfolio, post type, wordpress
 Requires at least: 6.2
 Tested up to: 6.3
 Stable tag: 1.0.0
@@ -11,16 +11,25 @@ Adds "Project" Post Type to your site.
 
 == Description ==
 
-UK Portfolio is a WordPress plugin by Uladzimir Kulesh that adds a custom post type "Project".
-By having custom post types in a separate plugin, your content remains intact across different themes.
+UK Portfolio is a WordPress plugin that adds a custom post type "Project". By having custom post types in a separate plugin, your content remains intact across different themes. It also registers separate project taxonomies for tags and categories.
+
+This plugin doesn’t change how projects are displayed in your theme. You will need to add the some templates if you want to customize the display of projects.
 
 == Installation ==
-
-The quickest method for installing the importer is:
 
 1. In your admin panel, go to Plugins and click the "Add New" button.
 2. Click "Upload Plugin" and "Choose File", then select the plugin's .zip file. Click "Install Now".
 3. Click "Activate" to use plugin right away.
+
+== Frequently Asked Questions ==
+
+= How can I display projects differently than regular posts? =
+
+You will need to create some templates: archive-uk-project.html, taxonomy-uk-project_category.html and taxonomy-uk-project_category.html for displaying multiple projects and a single-uk-project.html for displaying the single project.
+
+= Why did you make this? =
+
+To allow users have a portfolio functionality in my themes. And hopefully to save time for other people trying to build a portfolio.
 
 == Changelog ==
 
