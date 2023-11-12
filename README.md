@@ -12,6 +12,9 @@ This plugin doesn’t change how projects are displayed in your theme. You will 
 
 ## Changelog
 
+**1.1.0**
+* DELETED: Metaboxes.
+
 **1.0.0**
 * Released: October 21, 2023
 

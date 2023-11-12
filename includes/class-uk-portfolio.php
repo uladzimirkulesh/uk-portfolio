@@ -46,7 +46,7 @@ class UK_Portfolio {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.0
 	 */
 	public function __construct() {
 
@@ -60,7 +60,6 @@ class UK_Portfolio {
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->add_project_post_type();
-		$this->add_project_metaboxes();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
@@ -81,7 +80,7 @@ class UK_Portfolio {
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.0
 	 * @access   private
 	 */
 	private function load_dependencies() {
@@ -102,11 +101,6 @@ class UK_Portfolio {
 		 * The class responsible for adding "Project" post type.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-uk-portfolio-post-type.php';
-
-		/**
-		 * The class responsible for adding metaboxes.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-uk-portfolio-metaboxes.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
@@ -155,47 +149,6 @@ class UK_Portfolio {
 		$this->loader->add_action( 'manage_posts_custom_column', $plugin_post_type, 'display_thumbnail' );
 		$this->loader->add_action( 'restrict_manage_posts', $plugin_post_type, 'add_taxonomy_filters' );
 		$this->loader->add_filter( 'dashboard_glance_items', $plugin_post_type, 'add_projects_count' );
-
-	}
-
-	/**
-	 * Adds metaboxes.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	private function add_project_metaboxes() {
-
-		$prefix = '_uk_';
-		$fields = array();
-		$options = get_option( 'uk_portfolio_options' );
-
-		if ( is_array( $options ) && 'on' === $options[ 'add_to_featured' ] ) {
-			$fields[] = array(
-				'name' => esc_html__( 'Add to featured:', 'uk-portfolio' ),
-				'desc' => esc_html__( 'Add project to featured', 'uk-portfolio' ),
-				'id'   => $prefix . 'add_to_featured',
-				'type' => 'checkbox',
-				'std'  => '',
-			);
-		}
-
-		if ( $fields ) {
-			$portfolio_metaboxes = array(
-				'id'          => 'uk-project_meta',
-				'title'       => esc_html__( 'Project Settings', 'uk-portfolio' ),
-				'description' => esc_html__( '', 'uk-portfolio' ),
-				'screen'      => array( 'uk-project' ),
-				'context'     => 'normal',
-				'priority'    => 'high',
-				'fields'      => $fields,
-			);
-
-			$plugin_metaboxes = new UK_Portfolio_Metaboxes( $portfolio_metaboxes );
-
-			$this->loader->add_action( 'add_meta_boxes', $plugin_metaboxes, 'add_meta_boxes' );
-			$this->loader->add_action( 'save_post', $plugin_metaboxes, 'save_meta_boxes', 10, 2 );
-		}
 
 	}
 

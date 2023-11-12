@@ -10,7 +10,7 @@ class UK_Portfolio_Activator {
 	/**
 	 * Compare WordPress version and set parameters.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.0
 	 */
 	public static function activate() {
 
@@ -23,8 +23,7 @@ class UK_Portfolio_Activator {
 		// Set default plugin parameters
 		$default_options = array(
 			'projects_per_page' => 10,
-			'project_comments' => 'off',
-			'add_to_featured' => 'off'
+			'project_comments' => 'off'
 		);
 		add_option( 'uk_portfolio_options', $default_options );
 

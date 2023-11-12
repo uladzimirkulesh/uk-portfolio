@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UK Portfolio\n"
 "Report-Msgid-Bugs-To: https://uladzimirkulesh.com\n"
-"POT-Creation-Date: 2023-10-21 17:52+0000\n"
+"POT-Creation-Date: 2023-11-12 17:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
 "Language-Team: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
@@ -17,12 +17,8 @@ msgstr ""
 "X-Loco-Version: 2.6.6; wp-6.3.2\n"
 "X-Domain: uk-portfolio"
 
-#: admin/class-uk-portfolio-admin.php:177
+#: admin/class-uk-portfolio-admin.php:157
 msgid " projects"
-msgstr ""
-
-#: admin/class-uk-portfolio-admin.php:213
-msgid "\"Add To Featured\" Settings"
 msgstr ""
 
 #: includes/class-uk-portfolio-post-type.php:31
@@ -50,18 +46,6 @@ msgstr ""
 msgid "Add or remove tags"
 msgstr ""
 
-#: includes/class-uk-portfolio.php:176
-msgid "Add project to featured"
-msgstr ""
-
-#: admin/class-uk-portfolio-admin.php:126
-msgid "Add to featured"
-msgstr ""
-
-#: includes/class-uk-portfolio.php:175
-msgid "Add to featured:"
-msgstr ""
-
 #. Description of the plugin
 msgid "Adds Project Post Type to your site."
 msgstr ""
@@ -82,7 +66,7 @@ msgstr ""
 msgid "Allow comments"
 msgstr ""
 
-#: admin/class-uk-portfolio-admin.php:195
+#: admin/class-uk-portfolio-admin.php:175
 msgid "Allow people to submit comments on projects"
 msgstr ""
 
@@ -105,11 +89,6 @@ msgstr ""
 
 #: admin/class-uk-portfolio-admin.php:100
 msgid "Discussion Settings"
-msgstr ""
-
-#: admin/class-uk-portfolio-admin.php:218
-msgid ""
-"Display \"Add to featured\" checkbox when adding or editing project page"
 msgstr ""
 
 #: includes/class-uk-portfolio-post-type.php:80
@@ -196,7 +175,7 @@ msgstr ""
 msgid "Portfolio pages show at most"
 msgstr ""
 
-#: admin/class-uk-portfolio-admin.php:59 admin/class-uk-portfolio-admin.php:234
+#: admin/class-uk-portfolio-admin.php:59 admin/class-uk-portfolio-admin.php:191
 msgid "Portfolio Settings"
 msgstr ""
 
@@ -218,10 +197,6 @@ msgstr ""
 
 #: includes/class-uk-portfolio-post-type.php:43
 msgid "Project scheduled."
-msgstr ""
-
-#: includes/class-uk-portfolio.php:186 admin/class-uk-portfolio-admin.php:119
-msgid "Project Settings"
 msgstr ""
 
 #: includes/class-uk-portfolio-post-type.php:39
@@ -260,7 +235,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: admin/class-uk-portfolio-admin.php:158
+#: admin/class-uk-portfolio-admin.php:138
 msgid ""
 "Specify the number of projects that you would like to see on the portfolio "
 "archive pages."

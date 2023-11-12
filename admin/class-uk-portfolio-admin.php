@@ -69,7 +69,7 @@ class UK_Portfolio_Admin {
 	/**
 	 * Register settings for settings page.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.0
 	 */
 	public function register_settings() {
 
@@ -113,37 +113,17 @@ class UK_Portfolio_Admin {
 			)
 		);
 
-		// Add project settings section
-		add_settings_section(
-			'project_settings',
-			esc_html__( 'Project Settings', 'uk-portfolio' ),
-			null,
-			'uk-portfolio'
-		);
-
-		add_settings_field(
-			'add_to_featured',
-			esc_html__( 'Add to featured', 'uk-portfolio' ),
-			array( $this, 'add_to_featured_field'),
-			'uk-portfolio',
-			'project_settings',
-			array(
-				'label_for' => 'add_to_featured',
-			)
-		);
-
 	}
 
 	/**
 	 * Sanitize_options for settings page.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.0
 	 */
 	public function sanitize_options( $input ) {
 
 		$input[ 'projects_per_page' ] = absint( $input[ 'projects_per_page' ] );
 		$input[ 'project_comments' ] = sanitize_text_field( $input[ 'project_comments' ] );
-		$input[ 'add_to_featured' ] = sanitize_text_field( $input[ 'add_to_featured' ] );
 
 		return $input;
 
@@ -193,29 +173,6 @@ class UK_Portfolio_Admin {
 		$html  .= '<input type="hidden" name="uk_portfolio_options[project_comments]" value="off" />';
 		$html  .= sprintf( '<input type="checkbox" class="checkbox" id="project_comments" name="uk_portfolio_options[project_comments]" value="on" %1$s />', checked( $value, 'on', false ) );
 		$html  .= sprintf( '%1$s</label>', esc_html__( 'Allow people to submit comments on projects', 'uk-portfolio' ) );
-		$html  .= '</fieldset>';
-
-		echo $html;
-
-	}
-
-	/**
-	 * Output the "Add To Featured" settings field.
-	 *
-	 * @since    1.0.0
-	 */
-	public function add_to_featured_field() {
-
-		$options = get_option( 'uk_portfolio_options' );
-		$add_to_featured = $options[ 'add_to_featured' ];
-
-		$html  = '<fieldset>';
-		$html  .= sprintf( '<legend class="screen-reader-text"><span>%1$s</span></legend>', esc_html__( '"Add To Featured" Settings', 'uk-portfolio' ) );
-
-		$html  .= '<label for="add_to_featured">';
-		$html  .= '<input type="hidden" name="uk_portfolio_options[add_to_featured]" value="off" />';
-		$html  .= sprintf( '<input type="checkbox" class="checkbox" id="add_to_featured" name="uk_portfolio_options[add_to_featured]" value="on" %1$s />', checked( $add_to_featured, 'on', false ) );
-		$html  .= sprintf( '%1$s</label>', esc_html__( 'Display "Add to featured" checkbox when adding or editing project page', 'uk-portfolio' ) );
 		$html  .= '</fieldset>';
 
 		echo $html;
