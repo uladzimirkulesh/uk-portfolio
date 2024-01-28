@@ -12,9 +12,6 @@ This plugin doesn’t change how projects are displayed in your theme. You will 
 
 ## Changelog
 
-**1.1.1**
-* FIXED: add_taxonomy_filters function.
-
 **1.1.0**
 * DELETED: Metaboxes.
 
