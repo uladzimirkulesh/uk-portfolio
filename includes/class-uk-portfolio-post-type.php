@@ -171,32 +171,38 @@ class UK_Portfolio_Post_Type {
 	/**
 	 * Add taxonomy filters to the admin page.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.1
 	 */
 	public function add_taxonomy_filters() {
 
 		global $typenow;
 
+		if ( 'uk-project' !== $typenow ) {
+			return;
+		}
+
 		// Use taxonomy name or slug
 		$taxonomies = array( 'uk-project_category', 'uk-project_tag' );
 
 		// Post type for the filter
-		if ( $typenow == 'uk-project' ) {
-			foreach ( $taxonomies as $tax_slug ) {
-				$current_tax_slug = isset( $_GET[ $tax_slug ] ) ? $_GET[ $tax_slug ] : false;
-				$tax_obj = get_taxonomy( $tax_slug );
-				$tax_name = $tax_obj->labels->name;
-				$terms = get_terms( $tax_slug );
+		foreach ( $taxonomies as $tax_slug ) {
+			$terms = get_terms( $tax_slug );
 
-				if ( count( $terms ) > 0) {
-					echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
-					echo "<option value=''>$tax_name</option>";
-					foreach ( $terms as $term ) {
-						echo '<option value=' . $term->slug, $current_tax_slug == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>';
-					}
-					echo "</select>";
-				}
+			if ( 0 == count( $terms ) ) {
+				return;
 			}
+
+			$tax_obj = get_taxonomy( $tax_slug );
+			$tax_name = $tax_obj->labels->name;
+
+			$current_tax_slug = isset( $_GET[ $tax_slug ] ) ? sanitize_text_field( $_GET[ $tax_slug ] ) : false;
+
+			echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
+			echo "<option value=''>$tax_name</option>";
+			foreach ( $terms as $term ) {
+				echo '<option value=' . $term->slug, $current_tax_slug == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>';
+			}
+			echo "</select>";
 		}
 
 	}
@@ -217,7 +223,7 @@ class UK_Portfolio_Post_Type {
 		if ( $num_posts && $num_posts->publish ) {
 			$text = esc_html( _nx( '%s Project', '%s Projects', $num_posts->publish, 'Number of projects', 'uk-portfolio' ) );
 
-			$text             = sprintf( $text, number_format_i18n( $num_posts->publish ) );
+			$text = sprintf( $text, number_format_i18n( $num_posts->publish ) );
 			$post_type_object = get_post_type_object( 'uk-project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
@@ -230,7 +236,7 @@ class UK_Portfolio_Post_Type {
 		if ( $num_posts && $num_posts->pending > 0 ) {
 			$text = esc_html( _nx( '%s Project Pending', '%s Proects Pending', $num_posts->pending, 'Number of pending projects', 'uk-portfolio' ) );
 
-			$text             = sprintf( $text, number_format_i18n( $num_posts->pending ) );
+			$text = sprintf( $text, number_format_i18n( $num_posts->pending ) );
 			$post_type_object = get_post_type_object( 'uk-project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
