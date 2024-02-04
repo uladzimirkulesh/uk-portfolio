@@ -46,14 +46,14 @@ class UK_Portfolio {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.1.0
+	 * @since    1.1.2
 	 */
 	public function __construct() {
 
 		if ( defined( 'UK_PORTFOLIO_VERSION' ) ) {
 			$this->version = UK_PORTFOLIO_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.1.2';
 		}
 		$this->plugin_name = 'uk-portfolio';
 

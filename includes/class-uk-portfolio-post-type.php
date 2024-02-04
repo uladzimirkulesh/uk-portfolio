@@ -154,7 +154,7 @@ class UK_Portfolio_Post_Type {
 	/**
 	 * Display thumbnail.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.2
 	 */
 	public function display_thumbnail( $column ) {
 
@@ -162,7 +162,7 @@ class UK_Portfolio_Post_Type {
 
 		switch ( $column ) {
 			case 'uk-project_thumbnail':
-				echo get_the_post_thumbnail( $post->ID, array( 48, 48 ) );
+				echo get_the_post_thumbnail( absint( $post->ID ), array( 48, 48 ) );
 				break;
 		}
 
@@ -171,7 +171,7 @@ class UK_Portfolio_Post_Type {
 	/**
 	 * Add taxonomy filters to the admin page.
 	 *
-	 * @since    1.1.1
+	 * @since    1.1.2
 	 */
 	public function add_taxonomy_filters() {
 
@@ -197,12 +197,32 @@ class UK_Portfolio_Post_Type {
 
 			$current_tax_slug = isset( $_GET[ $tax_slug ] ) ? sanitize_text_field( $_GET[ $tax_slug ] ) : false;
 
-			echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
-			echo "<option value=''>$tax_name</option>";
+			$filter = '<select name="' . esc_attr( $tax_slug ) . '" id="' . esc_attr( $tax_slug ) . '" class="postform">';
+			$filter .= '<option value="">' . esc_html( $tax_name ) . '</option>';
 			foreach ( $terms as $term ) {
-				echo '<option value=' . $term->slug, $current_tax_slug == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>';
+				$filter .= sprintf(
+					'<option value="%1$s" %2$s />%3$s</option>',
+					esc_attr( $term->slug ),
+					selected( $current_tax_slug, $term->slug, false ),
+					esc_html( $term->name . ' (' . $term->count . ')' )
+				);
 			}
-			echo "</select>";
+			$filter .= '</select>';
+
+			echo wp_kses(
+				$filter,
+				array(
+					'select' => array(
+						'name'  => array(),
+						'id' 	=> array(),
+						'class' => array()
+					),
+					'option' => array(
+						'value' 	=> array(),
+						'selected' 	=> array()
+					)
+				)
+			);
 		}
 
 	}
@@ -210,7 +230,7 @@ class UK_Portfolio_Post_Type {
 	/**
 	 * Add count to "Right Now" dashboard widget.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.2
 	 */
 	public function add_projects_count() {
 
@@ -227,9 +247,9 @@ class UK_Portfolio_Post_Type {
 			$post_type_object = get_post_type_object( 'uk-project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
-				printf( '<li class="projects-count"><a href="edit.php?post_type=uk-project">%s</a></li>', $text );
+				printf( '<li class="projects-count"><a href="edit.php?post_type=uk-project">%s</a></li>', esc_html( $text ) );
 			} else {
-				printf( '<li class="projects-count"><span>%s</span></li>', $text );
+				printf( '<li class="projects-count"><span>%s</span></li>', esc_html( $text ) );
 			}
 		}
 
@@ -240,7 +260,7 @@ class UK_Portfolio_Post_Type {
 			$post_type_object = get_post_type_object( 'uk-project' );
 
 			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
-				printf( '<li class="projects-pending-count"><a href="edit.php?post_status=pending&post_type=uk-project">%s</a></li>', $text );
+				printf( '<li class="projects-pending-count"><a href="edit.php?post_status=pending&post_type=uk-project">%s</a></li>', esc_html( $text ) );
 			}
 		}
 

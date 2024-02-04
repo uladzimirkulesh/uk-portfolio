@@ -69,7 +69,7 @@ class UK_Portfolio_Admin {
 	/**
 	 * Register settings for settings page.
 	 *
-	 * @since    1.1.0
+	 * @since    1.1.2
 	 */
 	public function register_settings() {
 
@@ -77,18 +77,18 @@ class UK_Portfolio_Admin {
 
 		// Add reading settings section
 		add_settings_section(
-			'reading_settings',
+			'uk_portfolio_reading_settings',
 			esc_html__( 'Reading Settings', 'uk-portfolio' ),
 			array( $this, 'reading_settings_section'),
 			'uk-portfolio'
 		);
 
 		add_settings_field(
-			'projects_per_page',
+			'uk_portfolio_projects_per_page',
 			esc_html__( 'Portfolio pages show at most', 'uk-portfolio' ),
 			array( $this, 'projects_per_page_field'),
 			'uk-portfolio',
-			'reading_settings',
+			'uk_portfolio_reading_settings',
 			array(
 				'label_for' => 'projects_per_page',
 			)
@@ -96,18 +96,18 @@ class UK_Portfolio_Admin {
 
 		// Add discussion settings section
 		add_settings_section(
-			'discussion_settings',
+			'uk_portfolio_discussion_settings',
 			esc_html__( 'Discussion Settings', 'uk-portfolio' ),
 			null,
 			'uk-portfolio'
 		);
 
 		add_settings_field(
-			'project_comments',
+			'uk_portfolio_project_comments',
 			esc_html__( 'Allow comments', 'uk-portfolio' ),
 			array( $this, 'project_comments_field'),
 			'uk-portfolio',
-			'discussion_settings',
+			'uk_portfolio_discussion_settings',
 			array(
 				'label_for' => 'project_comments',
 			)

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UK Portfolio\n"
 "Report-Msgid-Bugs-To: https://uladzimirkulesh.com\n"
-"POT-Creation-Date: 2023-11-12 17:52+0000\n"
+"POT-Creation-Date: 2024-01-04 17:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
 "Language-Team: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.6; wp-6.3.2\n"
+"X-Loco-Version: 2.6.6; wp-6.4.3\n"
 "X-Domain: uk-portfolio"
 
 #: admin/class-uk-portfolio-admin.php:157
@@ -127,7 +127,7 @@ msgstr ""
 msgid "No projects found in trash"
 msgstr ""
 
-#: includes/class-uk-portfolio-post-type.php:231
+#: includes/class-uk-portfolio-post-type.php:257
 #, php-format
 msgctxt "Number of pending projects"
 msgid "%s Project Pending"
@@ -135,7 +135,7 @@ msgid_plural "%s Proects Pending"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-uk-portfolio-post-type.php:218
+#: includes/class-uk-portfolio-post-type.php:244
 #, php-format
 msgctxt "Number of projects"
 msgid "%s Project"
@@ -231,7 +231,7 @@ msgstr ""
 msgid "Separate tags with commas"
 msgstr ""
 
-#: uk-portfolio.php:50
+#: uk-portfolio.php:52
 msgid "Settings"
 msgstr ""
 
