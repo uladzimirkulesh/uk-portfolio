@@ -12,8 +12,12 @@ This plugin doesn’t change how projects are displayed in your theme. You will 
 
 ## Changelog
 
+**1.1.3 - Mart 10, 2024**
+	* DELETED: Not permitted files (.DS_Store).
+	* FIXED: Variables escapes.
+
 **1.1.2 - February 4, 2024**
-	* FIXED: variables escapes and plugin prefixes.
+	* FIXED: Variables escapes and plugin prefixes.
 
 **1.1.1**
 	* FIXED: add_taxonomy_filters function.

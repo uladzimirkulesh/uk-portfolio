@@ -3,7 +3,7 @@ Contributors: uladzimirkulesh
 Tags: portfolio, post type, wordpress
 Requires at least: 6.2
 Tested up to: 6.4
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,8 +33,12 @@ To allow users have a portfolio functionality in my themes. And hopefully to sav
 
 == Changelog ==
 
+= 1.1.3 - Mart 10, 2024 =
+* DELETED: Not permitted files (.DS_Store).
+* FIXED: Variables escapes.
+
 = 1.1.2 - February 4, 2024 =
-* FIXED: variables escapes and plugin prefixes.
+* FIXED: Variables escapes and plugin prefixes.
 
 = 1.1.1 - January 28, 2024 =
 * FIXED: add_taxonomy_filters function.

@@ -53,7 +53,7 @@ class UK_Portfolio {
 		if ( defined( 'UK_PORTFOLIO_VERSION' ) ) {
 			$this->version = UK_PORTFOLIO_VERSION;
 		} else {
-			$this->version = '1.1.2';
+			$this->version = '1.1.3';
 		}
 		$this->plugin_name = 'uk-portfolio';
 

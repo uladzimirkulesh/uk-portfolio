@@ -141,7 +141,7 @@ class UK_Portfolio_Admin {
 	/**
 	 * Output the projects per page settings field.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.3
 	 */
 	public function projects_per_page_field() {
 
@@ -151,31 +151,63 @@ class UK_Portfolio_Admin {
 			$options[ 'projects_per_page' ] = 10;
 		}
 
-		?>
-		<input name="uk_portfolio_options[projects_per_page]" type="number" step="1" min="1" id="projects_per_page" value="<?php echo esc_attr( $options[ 'projects_per_page' ] ) ?>" class="small-text">
-		<?php
-		esc_html_e( ' projects', 'uk-portfolio' );
+		$html = sprintf(
+			'<input name="uk_portfolio_options[projects_per_page]" type="number" step="1" min="1" id="projects_per_page" value="%1$s" class="small-text"> %2$s',
+			esc_attr( $options[ 'projects_per_page' ] ),
+			esc_html__( 'projects', 'uk-portfolio' )
+		);
+
+		echo wp_kses(
+			$html,
+			array(
+				'input' => array(
+					'name' => array(),
+					'type' => array(),
+					'step' => array(),
+					'min' => array(),
+					'id' => array(),
+					'value' => array(),
+					'class' => array()
+				)
+			)
+		);
 
 	}
 
 	/**
 	 * Output the comment status settings field.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.3
 	 */
 	public function project_comments_field() {
 
 		$options = get_option( 'uk_portfolio_options' );
 		$value = $options[ 'project_comments' ];
 
-		$html  = '<fieldset>';
-		$html  .= '<label for="project_comments">';
-		$html  .= '<input type="hidden" name="uk_portfolio_options[project_comments]" value="off" />';
-		$html  .= sprintf( '<input type="checkbox" class="checkbox" id="project_comments" name="uk_portfolio_options[project_comments]" value="on" %1$s />', checked( $value, 'on', false ) );
-		$html  .= sprintf( '%1$s</label>', esc_html__( 'Allow people to submit comments on projects', 'uk-portfolio' ) );
-		$html  .= '</fieldset>';
+		$html = '<fieldset>';
+		$html .= '<label for="project_comments">';
+		$html .= '<input type="hidden" name="uk_portfolio_options[project_comments]" value="off" />';
+		$html .= sprintf( '<input type="checkbox" class="checkbox" id="project_comments" name="uk_portfolio_options[project_comments]" value="on" %1$s />', checked( $value, 'on', false ) );
+		$html .= sprintf( '%1$s</label>', esc_html__( 'Allow people to submit comments on projects', 'uk-portfolio' ) );
+		$html .= '</fieldset>';
 
-		echo $html;
+		echo wp_kses(
+			$html,
+			array(
+				'fieldset',
+				'label' => array(
+					'for' => array()
+				),
+				'input' => array(
+					'type' => array(),
+					'name' => array(),
+					'value' => array(),
+					'class' => array(),
+					'id' => array(),
+					'checked' => array()
+				)
+			)
+		);
 
 	}
 
