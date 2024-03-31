@@ -12,6 +12,9 @@ This plugin doesn’t change how projects are displayed in your theme. You will 
 
 ## Changelog
 
+**1.1.4 - Mart 31, 2024**
+* FIXED: readme.txt.
+
 **1.1.3 - Mart 10, 2024**
 * DELETED: Not permitted files (.DS_Store).
 * FIXED: Variables escapes.

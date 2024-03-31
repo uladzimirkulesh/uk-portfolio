@@ -3,7 +3,7 @@
  * Plugin Name:       UK Portfolio
  * Plugin URI:        https://uladzimirkulesh.com/portfolio/uk-portfolio
  * Description:       Adds Project Post Type to your site.
- * Version:           1.1.3
+ * Version:           1.1.4
  * Author:            Uladzimir Kulesh
  * Author URI:        https://uladzimirkulesh.com/
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'UK_PORTFOLIO_VERSION', '1.1.3' );
+define( 'UK_PORTFOLIO_VERSION', '1.1.4' );
 
 /**
  * The code that runs during plugin activation.
