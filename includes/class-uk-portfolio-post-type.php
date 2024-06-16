@@ -48,7 +48,7 @@ class UK_Portfolio_Post_Type {
 			'public'          => true,
 			'supports'        => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ),
 			'capability_type' => 'post',
-			'rewrite'         => array( "slug" => "portfolio" ),
+			'rewrite'         => array( 'slug' => 'portfolio' ),
 			'has_archive'     => true,
 			'menu_position'   => 20,
 			'menu_icon'       => 'dashicons-portfolio',

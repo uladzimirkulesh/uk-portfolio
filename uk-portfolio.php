@@ -3,7 +3,7 @@
  * Plugin Name:       UK Portfolio
  * Plugin URI:        https://uladzimirkulesh.com/portfolio/uk-portfolio
  * Description:       Adds Project Post Type to your site.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Author:            Uladzimir Kulesh
  * Author URI:        https://uladzimirkulesh.com/
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'UK_PORTFOLIO_VERSION', '1.1.4' );
+define( 'UK_PORTFOLIO_VERSION', '1.1.5' );
 
 /**
  * The code that runs during plugin activation.
@@ -35,6 +35,21 @@ function uk_portfolio_activate() {
 
 }
 register_activation_hook( __FILE__, 'uk_portfolio_activate' );
+
+/**
+ * The code that runs after WordPress has finished loading
+ * but before any headers are sent (here we clear the permalink cache).
+ *
+ * @since    1.1.5
+ */
+function uk_portfolio_flush_rewrite() {
+
+	if ( ! get_option( 'uk_portfolio_options' ) ) {
+		flush_rewrite_rules( false );
+	}
+
+}
+add_action( 'init', 'uk_portfolio_flush_rewrite' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -53,7 +68,7 @@ function uk_portfolio_settings_link( $settings ) {
 	return $settings;
 
 }
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'uk_portfolio_settings_link' );
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'uk_portfolio_settings_link' );
 
 /**
  * Begins execution of the plugin.

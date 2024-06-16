@@ -12,6 +12,10 @@ This plugin doesn’t change how projects are displayed in your theme. You will 
 
 ## Changelog
 
+**1.1.5 - June 16, 2024**
+* CHECKED: Compatibility with WordPress 6.5.
+* ADDED: Clearing permalink cache.
+
 **1.1.4 - Mart 31, 2024**
 * FIXED: readme.txt.
 
