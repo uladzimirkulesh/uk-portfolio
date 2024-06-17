@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UK Portfolio\n"
 "Report-Msgid-Bugs-To: https://uladzimirkulesh.com\n"
-"POT-Creation-Date: 2024-01-04 17:52+0000\n"
+"POT-Creation-Date: 2024-06-17 05:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
 "Language-Team: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
@@ -14,12 +14,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.6; wp-6.4.3\n"
+"X-Loco-Version: 2.6.10; wp-6.5.4\n"
 "X-Domain: uk-portfolio"
-
-#: admin/class-uk-portfolio-admin.php:157
-msgid " projects"
-msgstr ""
 
 #: includes/class-uk-portfolio-post-type.php:31
 #: includes/class-uk-portfolio-post-type.php:34
@@ -66,7 +62,7 @@ msgstr ""
 msgid "Allow comments"
 msgstr ""
 
-#: admin/class-uk-portfolio-admin.php:175
+#: admin/class-uk-portfolio-admin.php:191
 msgid "Allow people to submit comments on projects"
 msgstr ""
 
@@ -175,7 +171,7 @@ msgstr ""
 msgid "Portfolio pages show at most"
 msgstr ""
 
-#: admin/class-uk-portfolio-admin.php:59 admin/class-uk-portfolio-admin.php:191
+#: admin/class-uk-portfolio-admin.php:59 admin/class-uk-portfolio-admin.php:223
 msgid "Portfolio Settings"
 msgstr ""
 
@@ -207,6 +203,10 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
+#: admin/class-uk-portfolio-admin.php:157
+msgid "projects"
+msgstr ""
+
 #: admin/class-uk-portfolio-admin.php:81
 msgid "Reading Settings"
 msgstr ""
@@ -231,7 +231,7 @@ msgstr ""
 msgid "Separate tags with commas"
 msgstr ""
 
-#: uk-portfolio.php:52
+#: uk-portfolio.php:67
 msgid "Settings"
 msgstr ""
 
