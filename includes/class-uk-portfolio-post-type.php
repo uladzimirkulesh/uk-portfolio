@@ -118,7 +118,7 @@ class UK_Portfolio_Post_Type {
 			'separate_items_with_commas' => esc_html__( 'Separate tags with commas', 'uk-portfolio' ),
 			'add_or_remove_items'        => esc_html__( 'Add or remove tags', 'uk-portfolio' ),
 			'choose_from_most_used'      => esc_html__( 'Choose from the most used tags', 'uk-portfolio' ),
-			'menu_name'                  => esc_html__( 'Tags', 'uk-portfolion' ),
+			'menu_name'                  => esc_html__( 'Tags', 'uk-portfolio' ),
 		);
 
 		$taxonomy_project_tag_args = array(

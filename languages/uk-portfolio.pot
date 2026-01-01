@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UK Portfolio\n"
 "Report-Msgid-Bugs-To: https://uladzimirkulesh.com\n"
-"POT-Creation-Date: 2024-06-17 05:55+0000\n"
+"POT-Creation-Date: 2026-01-01 15:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
 "Language-Team: Uladzimir Kulesh <u.a.kulesh@gmail.com>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.10; wp-6.5.4\n"
+"X-Loco-Version: 2.8.0; wp-6.9; php-8.2.23\n"
 "X-Domain: uk-portfolio"
 
 #: includes/class-uk-portfolio-post-type.php:31
@@ -246,6 +246,7 @@ msgid "Tag"
 msgstr ""
 
 #: includes/class-uk-portfolio-post-type.php:107
+#: includes/class-uk-portfolio-post-type.php:121
 msgid "Tags"
 msgstr ""
 

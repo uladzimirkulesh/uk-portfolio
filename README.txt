@@ -2,8 +2,8 @@
 Contributors: uladzimirkulesh
 Tags: portfolio, post type
 Requires at least: 6.2
-Tested up to: 6.5
-Stable tag: 1.1.5
+Tested up to: 6.9
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ You will need to create some templates: archive-uk-project.html, taxonomy-uk-pro
 To allow users have a portfolio functionality in my themes. And hopefully to save time for other people trying to build a portfolio.
 
 == Changelog ==
+
+= 1.1.6 - January 1, 2026 =
+* CHECKED: Compatibility with WordPress 6.9.
 
 = 1.1.5 - June 16, 2024 =
 * CHECKED: Compatibility with WordPress 6.5.
