@@ -12,6 +12,9 @@ This plugin doesn’t change how projects are displayed in your theme. You will 
 
 ## Changelog
 
+**1.1.7 - June 11, 2026**
+* CHECKED: Compatibility with WordPress 7.0.
+
 **1.1.6 - January 1, 2026**
 * CHECKED: Compatibility with WordPress 6.9.
 
