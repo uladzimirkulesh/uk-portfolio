@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       UK Portfolio
- * Plugin URI:        https://uladzimirkulesh.com/portfolio/uk-portfolio
+ * Plugin URI:        https://mroya.eu/portfolio/uk-portfolio/
  * Description:       Adds Project Post Type to your site.
- * Version:           1.1.7
+ * Version:           1.1.8
  * Author:            Uladzimir Kulesh
- * Author URI:        https://uladzimirkulesh.com/
+ * Author URI:        https://mroya.eu/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       uk-portfolio
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'UK_PORTFOLIO_VERSION', '1.1.7' );
+define( 'UK_PORTFOLIO_VERSION', '1.1.8' );
 
 /**
  * The code that runs during plugin activation.

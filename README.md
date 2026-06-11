@@ -12,6 +12,9 @@ This plugin doesn’t change how projects are displayed in your theme. You will 
 
 ## Changelog
 
+**1.1.8 - June 11, 2026**
+* CHANGED: Author info.
+
 **1.1.7 - June 11, 2026**
 * CHECKED: Compatibility with WordPress 7.0.
 
