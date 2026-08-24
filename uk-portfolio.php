@@ -3,7 +3,7 @@
  * Plugin Name:       UK Portfolio
  * Plugin URI:        https://mroya.eu/portfolio/uk-portfolio/
  * Description:       Adds Project Post Type to your site.
- * Version:           1.1.8
+ * Version:           1.1.9
  * Author:            Uladzimir Kulesh
  * Author URI:        https://mroya.eu/
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'UK_PORTFOLIO_VERSION', '1.1.8' );
+define( 'UK_PORTFOLIO_VERSION', '1.1.9' );
 
 /**
  * The code that runs during plugin activation.
